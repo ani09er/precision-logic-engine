@@ -6,12 +6,26 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import ImpactCard from "@/components/ImpactCard";
 import CollisionParticles from "@/components/CollisionParticles";
+import heroImage from "@/assets/hero-image.png";
 
 const Index = () => {
   return (
     <Layout>
       {/* Hero */}
       <section className="min-h-[90vh] flex items-center relative overflow-hidden">
+        {/* Hero background image */}
+        <motion.div
+          className="absolute inset-0 z-0"
+          initial={{ scale: 1.1, opacity: 0 }}
+          animate={{ scale: 1, opacity: 0.18 }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <img
+            src={heroImage}
+            alt="Collision burst abstract"
+            className="w-full h-full object-cover object-center"
+          />
+        </motion.div>
         {/* Collision debris particles */}
         <CollisionParticles />
         {/* Kinetic background element */}
