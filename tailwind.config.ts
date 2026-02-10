@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["'IBM Plex Sans'", "system-ui", "sans-serif"],
+        heading: ["'Space Grotesk'", "system-ui", "sans-serif"],
         body: ["'Inter'", "system-ui", "sans-serif"],
         mono: ["'JetBrains Mono'", "monospace"],
       },
