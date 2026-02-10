@@ -1,5 +1,6 @@
 import Navigation from "./Navigation";
 import Footer from "./Footer";
+import PageTransition from "./PageTransition";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -17,7 +18,9 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      <main className="flex-1 pt-16">{children}</main>
+      <main className="flex-1 pt-16 overflow-hidden">
+        <PageTransition>{children}</PageTransition>
+      </main>
       <Footer />
     </div>
   );
