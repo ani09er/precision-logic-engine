@@ -5,12 +5,15 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import ImpactCard from "@/components/ImpactCard";
+import CollisionParticles from "@/components/CollisionParticles";
 
 const Index = () => {
   return (
     <Layout>
       {/* Hero */}
       <section className="min-h-[90vh] flex items-center relative overflow-hidden">
+        {/* Collision debris particles */}
+        <CollisionParticles />
         {/* Kinetic background element */}
         <motion.div
           className="absolute top-1/2 left-1/2 w-[500px] h-[500px] rounded-full border border-accent/10"
